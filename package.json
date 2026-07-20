@@ -4,6 +4,6 @@
   "description": "Interactive Spanish regular verb conjugation practice",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server"
   }
 }
