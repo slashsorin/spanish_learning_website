@@ -130,9 +130,10 @@ function storeQuestion(question) {
 }
 
 async function loadQuestion(selectedTenses = getSelectedTenses()) {
-  const query = selectedTenses.length > 0 ? `?${selectedTenses.map((tense) => `tense=${encodeURIComponent(tense)}`).join('&')}` : '';
-  const response = await fetch(`/api/question${query}`);
-  const nextQuestion = await response.json();
+  const response = await fetch('./questions.json');
+  const questions = await response.json();
+  const filteredQuestions = questions.filter((question) => selectedTenses.includes(question.tense));
+  const nextQuestion = filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
   storeQuestion(nextQuestion);
 }
 
