@@ -38,7 +38,7 @@ function renderTenseFilters() {
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.value = tense.value;
-    checkbox.checked = true;
+    checkbox.checked = tense.value === 'present';
     checkbox.addEventListener('change', () => {
       const selectedTenses = getSelectedTenses();
       if (selectedTenses.length > 0) {
