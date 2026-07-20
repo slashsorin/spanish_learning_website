@@ -1,0 +1,9 @@
+{
+  "name": "spanish-learning-website",
+  "version": "1.0.0",
+  "description": "Interactive Spanish regular verb conjugation practice",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
