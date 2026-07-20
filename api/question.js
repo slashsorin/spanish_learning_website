@@ -11,10 +11,12 @@ module.exports = async function handler(req, res) {
     const question = buildQuestion(selectedTenses);
 
     res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(question);
+    res.statusCode = 200;
+    res.end(JSON.stringify(question));
   } catch (error) {
     console.error('question handler failed', error);
     res.setHeader('Content-Type', 'application/json');
-    res.status(500).json({ error: 'Failed to generate question' });
+    res.statusCode = 500;
+    res.end(JSON.stringify({ error: 'Failed to generate question' }));
   }
 };
