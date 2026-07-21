@@ -198,7 +198,7 @@ function sendFile(res, filePath, contentType) {
   });
 }
 
-const server = http.createServer((req, res) => {
+function handleRequest(req, res) {
   const parsedUrl = url.parse(req.url, true);
 
   if (parsedUrl.pathname === '/api/question') {
@@ -232,7 +232,9 @@ const server = http.createServer((req, res) => {
   }[extension] || 'application/octet-stream';
 
   sendFile(res, filePath, contentType);
-});
+}
+
+const server = http.createServer(handleRequest);
 
 if (require.main === module) {
   server.listen(PORT, () => {
@@ -240,7 +242,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = {
-  getAvailableTenses,
-  buildQuestion
-};
+module.exports = handleRequest;
