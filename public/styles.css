@@ -167,6 +167,11 @@ input:focus {
   gap: 12px;
   margin-top: 16px;
   flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+#hint-btn {
+  margin-left: auto;
 }
 
 button {

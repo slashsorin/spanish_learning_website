@@ -5,6 +5,7 @@ const feedbackEl = document.getElementById('feedback');
 const checkBtn = document.getElementById('check-btn');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
+const hintBtn = document.getElementById('hint-btn');
 const tenseFilterContainer = document.getElementById('tense-filters');
 
 let currentQuestion = null;
@@ -123,6 +124,11 @@ function renderQuestion() {
     progressBar.classList.remove('active');
   }
   clearAutoAdvance();
+  if (hintBtn) {
+    hintBtn.style.display = 'inline-flex';
+    hintBtn.disabled = false;
+    hintBtn.textContent = 'Hint';
+  }
   answerInput.focus();
   prevBtn.disabled = currentIndex <= 0;
 }
@@ -211,6 +217,17 @@ prevBtn.addEventListener('click', () => {
   currentIndex -= 1;
   currentQuestion = questionHistory[currentIndex];
   renderQuestion();
+});
+
+hintBtn.addEventListener('click', () => {
+  if (!currentQuestion) return;
+
+  feedbackEl.textContent = `Hint: ${currentQuestion.correctAnswer}`;
+  feedbackEl.className = 'feedback success';
+  if (hintBtn) {
+    hintBtn.textContent = currentQuestion.correctAnswer;
+    hintBtn.disabled = true;
+  }
 });
 
 nextBtn.addEventListener('click', () => loadQuestion(getSelectedTenses()));
