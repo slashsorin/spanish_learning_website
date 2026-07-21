@@ -2,7 +2,6 @@ const promptEl = document.getElementById('prompt');
 const translationEl = document.getElementById('translation');
 const answerInput = document.getElementById('answer');
 const feedbackEl = document.getElementById('feedback');
-const checkBtn = document.getElementById('check-btn');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const hintBtn = document.getElementById('hint-btn');
@@ -265,6 +264,14 @@ function showResult(isCorrect) {
   }
 }
 
+function submitAnswer() {
+  if (!currentQuestion) return;
+
+  const userAnswer = normalizeAnswer(answerInput.value);
+  const correctAnswer = normalizeAnswer(currentQuestion.correctAnswer);
+  showResult(userAnswer === correctAnswer);
+}
+
 function checkLiveAnswer() {
   if (!currentQuestion || !answerInput.value.trim()) {
     setAnswerState(null);
@@ -290,14 +297,6 @@ function checkLiveAnswer() {
     feedbackEl.className = 'feedback error';
   }
 }
-
-checkBtn.addEventListener('click', () => {
-  if (!currentQuestion) return;
-
-  const userAnswer = normalizeAnswer(answerInput.value);
-  const correctAnswer = normalizeAnswer(currentQuestion.correctAnswer);
-  showResult(userAnswer === correctAnswer);
-});
 
 prevBtn.addEventListener('click', () => {
   if (currentIndex <= 0) return;
@@ -348,7 +347,7 @@ answerInput.addEventListener('input', () => {
 answerInput.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     event.preventDefault();
-    checkBtn.click();
+    submitAnswer();
   }
 });
 
