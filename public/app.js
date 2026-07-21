@@ -12,6 +12,8 @@ const tenseSheetBackdrop = document.getElementById('tense-sheet-backdrop');
 const tenseSheetClose = document.getElementById('tense-sheet-close');
 const tenseSheetApply = document.getElementById('tense-sheet-apply');
 const tenseChipList = document.getElementById('tense-chip-list');
+const rulesContent = document.getElementById('rules-content');
+const rulesProgressBar = document.getElementById('rules-progress-bar');
 
 let currentQuestion = null;
 let questionHistory = [];
@@ -19,9 +21,12 @@ let currentIndex = -1;
 let liveCheckTimer = null;
 let autoAdvanceTimer = null;
 let progressTimer = null;
+let rulesRevealTimer = null;
 let selectedTenses = new Set(['present']);
 let draftTenses = new Set(selectedTenses);
 let isTenseSheetOpen = false;
+let rulesRevealed = false;
+const rulesCountdownMs = 20000;
 
 const tenseOptions = [
   { value: 'present', label: 'Present' },
@@ -163,6 +168,51 @@ function clearAutoAdvance() {
   }
 }
 
+function clearRulesCountdown() {
+  if (rulesRevealTimer) {
+    clearTimeout(rulesRevealTimer);
+    rulesRevealTimer = null;
+  }
+}
+
+function hideRulesContent() {
+  rulesRevealed = false;
+  if (rulesContent) {
+    rulesContent.hidden = true;
+  }
+  if (rulesProgressBar) {
+    rulesProgressBar.style.transition = 'none';
+    rulesProgressBar.style.width = '0%';
+  }
+}
+
+function revealRulesContent() {
+  rulesRevealed = true;
+  if (rulesContent) {
+    rulesContent.hidden = false;
+  }
+}
+
+function startRulesCountdown() {
+  clearRulesCountdown();
+  hideRulesContent();
+
+  if (!rulesProgressBar) {
+    return;
+  }
+
+  window.requestAnimationFrame(() => {
+    if (!rulesProgressBar) return;
+    rulesProgressBar.style.transition = `width ${rulesCountdownMs / 1000}s linear`;
+    rulesProgressBar.style.width = '100%';
+  });
+
+  rulesRevealTimer = setTimeout(() => {
+    revealRulesContent();
+    rulesRevealTimer = null;
+  }, rulesCountdownMs);
+}
+
 function startAutoAdvance() {
   clearAutoAdvance();
 
@@ -211,6 +261,7 @@ function renderQuestion() {
     progressBar.classList.remove('active');
   }
   clearAutoAdvance();
+  startRulesCountdown();
   if (hintBtn) {
     hintBtn.style.display = 'inline-flex';
     hintBtn.disabled = false;
@@ -251,6 +302,10 @@ function showResult(isCorrect) {
   if (!currentQuestion) return;
 
   if (isCorrect) {
+    clearRulesCountdown();
+    if (!rulesRevealed) {
+      hideRulesContent();
+    }
     feedbackEl.textContent = `Correct! ${currentQuestion.correctAnswer} is the right answer.`;
     feedbackEl.className = 'feedback success';
     setAnswerState(true);
@@ -287,6 +342,10 @@ function checkLiveAnswer() {
   setAnswerState(isCorrect);
 
   if (isCorrect) {
+    clearRulesCountdown();
+    if (!rulesRevealed) {
+      hideRulesContent();
+    }
     feedbackEl.textContent = 'Correct!';
     feedbackEl.className = 'feedback success';
     answerInput.readOnly = true;
