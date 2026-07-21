@@ -131,7 +131,8 @@ function storeQuestion(question) {
 
 async function loadQuestion(selectedTenses = getSelectedTenses()) {
   const query = selectedTenses.length > 0 ? `?${selectedTenses.map((tense) => `tense=${encodeURIComponent(tense)}`).join('&')}` : '';
-  const response = await fetch(`/api/question${query}`);
+  const requestUrl = `/api/question${query}${query ? '&' : '?'}_=${encodeURIComponent(Date.now().toString())}`;
+  const response = await fetch(requestUrl, { cache: 'no-store' });
   const nextQuestion = await response.json();
   storeQuestion(nextQuestion);
 }
