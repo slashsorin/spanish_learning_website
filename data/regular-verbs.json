@@ -1,0 +1,894 @@
+[
+  {
+    "infinitive": "hablar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "comer",
+    "ending": "er"
+  },
+  {
+    "infinitive": "vivir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "estudiar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "aprender",
+    "ending": "er"
+  },
+  {
+    "infinitive": "escribir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "abandonar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "aceptar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "acordar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "adaptar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "admirar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "afirmar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "agregar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "ahorrar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "alcanzar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "alimentar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "alivar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "analizar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "animar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "aparecer",
+    "ending": "er"
+  },
+  {
+    "infinitive": "aplicar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "apoyar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "aprovechar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "asistir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "atender",
+    "ending": "er"
+  },
+  {
+    "infinitive": "aumentar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "autorizar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "ayudar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "bailar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "beneficiar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "brindar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "cambiar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "cantar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "captar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "celebrar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "cerrar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "cocinar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "colaborar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "comprar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "comunicar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "conectar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "conservar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "considerar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "construir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "consumir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "contar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "controlar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "convencer",
+    "ending": "er"
+  },
+  {
+    "infinitive": "cooperar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "corregir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "crear",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "cultivar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "debatir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "declarar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "defender",
+    "ending": "er"
+  },
+  {
+    "infinitive": "dejar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "desarrollar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "descubrir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "describir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "diseñar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "disfrutar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "dividir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "elegir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "emitir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "emplear",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "encargar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "encontrar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "enseñar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "entender",
+    "ending": "er"
+  },
+  {
+    "infinitive": "entregar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "escalar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "escuchar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "esperar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "estimular",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "evitar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "examinar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "explicar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "expresar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "fabricar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "felicitar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "fijar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "firmar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "formar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "funcionar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "ganar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "generar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "guiar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "identificar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "ignorar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "imaginar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "importar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "indicar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "informar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "iniciar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "invitar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "jugar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "limitar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "llenar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "llamar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "llevar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "lograr",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "mandar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "manejar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "marcar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "medir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "mejorar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "mezclar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "migrar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "motivar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "nadar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "necesitar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "nombrar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "notar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "ocupar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "ofrecer",
+    "ending": "er"
+  },
+  {
+    "infinitive": "ordenar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "organizar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "pagar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "participar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "pasar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "perder",
+    "ending": "er"
+  },
+  {
+    "infinitive": "permitir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "personalizar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "planificar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "practicar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "preparar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "presentar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "prevenir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "producir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "proteger",
+    "ending": "er"
+  },
+  {
+    "infinitive": "publicar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "quedar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "quitar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "realizar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "recibir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "recomendar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "recordar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "recuperar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "reducir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "reflejar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "reformar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "regalar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "regresar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "reunir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "revisar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "satisfacer",
+    "ending": "er"
+  },
+  {
+    "infinitive": "seguir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "señalar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "servir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "simplificar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "solucionar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "sorprender",
+    "ending": "er"
+  },
+  {
+    "infinitive": "subir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "sugerir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "superar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "tecnologizar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "terminar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "trabajar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "traducir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "transformar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "transportar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "tratar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "usar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "utilizar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "valorar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "vender",
+    "ending": "er"
+  },
+  {
+    "infinitive": "verificar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "visitar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "volver",
+    "ending": "er"
+  },
+  {
+    "infinitive": "votar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "zumbar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "acelerar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "adoptar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "afrontar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "agilizar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "albergar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "ampliar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "armonizar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "asumir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "automatizar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "borrar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "cargar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "clasificar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "clonar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "coordinar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "corresponder",
+    "ending": "er"
+  },
+  {
+    "infinitive": "cruzar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "degradar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "despejar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "disponer",
+    "ending": "er"
+  },
+  {
+    "infinitive": "equilibrar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "fascinar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "fomentar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "fracasar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "gratificar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "heredar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "influir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "interceptar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "invertir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "jurar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "lanzar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "mantener",
+    "ending": "er"
+  },
+  {
+    "infinitive": "matricular",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "modificar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "multiplicar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "operar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "optimizar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "ornamentar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "pintar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "plantear",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "prolongar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "prometer",
+    "ending": "er"
+  },
+  {
+    "infinitive": "reconocer",
+    "ending": "er"
+  },
+  {
+    "infinitive": "reemplazar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "remodelar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "respetar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "robar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "sacrificar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "sombrar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "suministrar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "suprimir",
+    "ending": "ir"
+  },
+  {
+    "infinitive": "tolerar",
+    "ending": "ar"
+  },
+  {
+    "infinitive": "vincular",
+    "ending": "ar"
+  }
+]
