@@ -1,4 +1,5 @@
 const promptEl = document.getElementById('prompt');
+const translationEl = document.getElementById('translation');
 const answerInput = document.getElementById('answer');
 const feedbackEl = document.getElementById('feedback');
 const checkBtn = document.getElementById('check-btn');
@@ -105,6 +106,11 @@ function renderQuestion() {
   if (!currentQuestion) return;
 
   promptEl.textContent = currentQuestion.prompt;
+  if (translationEl) {
+    translationEl.textContent = currentQuestion.translation
+      ? `Translation: ${currentQuestion.translation}`
+      : '';
+  }
   feedbackEl.textContent = '';
   feedbackEl.className = 'feedback';
   answerInput.value = '';
