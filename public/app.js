@@ -6,7 +6,13 @@ const checkBtn = document.getElementById('check-btn');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const hintBtn = document.getElementById('hint-btn');
-const tenseFilterContainer = document.getElementById('tense-filters');
+const tenseFilterToggle = document.getElementById('tense-filter-toggle');
+const tenseSummary = document.getElementById('tense-summary');
+const tenseSheet = document.getElementById('tense-sheet');
+const tenseSheetBackdrop = document.getElementById('tense-sheet-backdrop');
+const tenseSheetClose = document.getElementById('tense-sheet-close');
+const tenseSheetApply = document.getElementById('tense-sheet-apply');
+const tenseChipList = document.getElementById('tense-chip-list');
 
 let currentQuestion = null;
 let questionHistory = [];
@@ -14,6 +20,9 @@ let currentIndex = -1;
 let liveCheckTimer = null;
 let autoAdvanceTimer = null;
 let progressTimer = null;
+let selectedTenses = new Set(['present']);
+let draftTenses = new Set(selectedTenses);
+let isTenseSheetOpen = false;
 
 const tenseOptions = [
   { value: 'present', label: 'Present' },
@@ -31,34 +40,113 @@ const tenseOptions = [
 ];
 
 function renderTenseFilters() {
-  tenseFilterContainer.innerHTML = '';
+  if (!tenseChipList) return;
+
+  tenseChipList.innerHTML = '';
 
   tenseOptions.forEach((tense) => {
-    const label = document.createElement('label');
-    label.className = 'filter-option';
-
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.value = tense.value;
-    checkbox.checked = tense.value === 'present';
-    checkbox.addEventListener('change', () => {
-      const selectedTenses = getSelectedTenses();
-      if (selectedTenses.length > 0) {
-        loadQuestion(selectedTenses);
-      } else {
-        feedbackEl.textContent = 'Select at least one tense to keep practicing.';
-        feedbackEl.className = 'feedback error';
-      }
-    });
-
-    label.appendChild(checkbox);
-    label.appendChild(document.createTextNode(tense.label));
-    tenseFilterContainer.appendChild(label);
+    const chip = document.createElement('button');
+    chip.type = 'button';
+    chip.className = 'tense-chip';
+    chip.dataset.tense = tense.value;
+    chip.setAttribute('aria-pressed', String(draftTenses.has(tense.value)));
+    chip.textContent = tense.label;
+    chip.addEventListener('click', () => toggleDraftTense(tense.value));
+    tenseChipList.appendChild(chip);
   });
+
+  updateTenseUI();
 }
 
 function getSelectedTenses() {
-  return Array.from(tenseFilterContainer.querySelectorAll('input:checked')).map((checkbox) => checkbox.value);
+  return Array.from(selectedTenses);
+}
+
+function getTenseLabel(value) {
+  const option = tenseOptions.find((item) => item.value === value);
+  return option ? option.label : value;
+}
+
+function updateTenseUI() {
+  if (tenseSummary) {
+    const labels = Array.from(selectedTenses).map(getTenseLabel);
+    tenseSummary.textContent = `Selected: ${labels.join(', ')}`;
+  }
+
+  if (!tenseChipList) return;
+
+  tenseChipList.querySelectorAll('.tense-chip').forEach((chip) => {
+    const tense = chip.dataset.tense;
+    const isSelected = draftTenses.has(tense);
+    chip.classList.toggle('selected', isSelected);
+    chip.setAttribute('aria-pressed', String(isSelected));
+  });
+}
+
+function toggleDraftTense(tenseValue) {
+  if (draftTenses.has(tenseValue)) {
+    if (draftTenses.size === 1) {
+      feedbackEl.textContent = 'Select at least one tense to keep practicing.';
+      feedbackEl.className = 'feedback error';
+      return;
+    }
+
+    draftTenses.delete(tenseValue);
+  } else {
+    draftTenses.add(tenseValue);
+  }
+
+  updateTenseUI();
+}
+
+function openTenseSheet() {
+  draftTenses = new Set(selectedTenses);
+  isTenseSheetOpen = true;
+  document.body.classList.add('sheet-open');
+
+  if (tenseSheet) {
+    tenseSheet.hidden = false;
+  }
+  if (tenseSheetBackdrop) {
+    tenseSheetBackdrop.hidden = false;
+  }
+  if (tenseFilterToggle) {
+    tenseFilterToggle.setAttribute('aria-expanded', 'true');
+  }
+
+  updateTenseUI();
+  const firstChip = tenseChipList?.querySelector('.tense-chip');
+  if (firstChip) {
+    firstChip.focus();
+  }
+}
+
+function closeTenseSheet() {
+  isTenseSheetOpen = false;
+  document.body.classList.remove('sheet-open');
+
+  if (tenseSheet) {
+    tenseSheet.hidden = true;
+  }
+  if (tenseSheetBackdrop) {
+    tenseSheetBackdrop.hidden = true;
+  }
+  if (tenseFilterToggle) {
+    tenseFilterToggle.setAttribute('aria-expanded', 'false');
+  }
+}
+
+function applyTenseSelection() {
+  if (draftTenses.size === 0) {
+    feedbackEl.textContent = 'Select at least one tense to keep practicing.';
+    feedbackEl.className = 'feedback error';
+    return;
+  }
+
+  selectedTenses = new Set(draftTenses);
+  updateTenseUI();
+  closeTenseSheet();
+  loadQuestion(getSelectedTenses());
 }
 
 function normalizeAnswer(value) {
@@ -231,6 +319,28 @@ hintBtn.addEventListener('click', () => {
 });
 
 nextBtn.addEventListener('click', () => loadQuestion(getSelectedTenses()));
+if (tenseFilterToggle) {
+  tenseFilterToggle.addEventListener('click', openTenseSheet);
+}
+
+if (tenseSheetBackdrop) {
+  tenseSheetBackdrop.addEventListener('click', closeTenseSheet);
+}
+
+if (tenseSheetClose) {
+  tenseSheetClose.addEventListener('click', closeTenseSheet);
+}
+
+if (tenseSheetApply) {
+  tenseSheetApply.addEventListener('click', applyTenseSelection);
+}
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && isTenseSheetOpen) {
+    closeTenseSheet();
+  }
+});
+
 answerInput.addEventListener('input', () => {
   clearTimeout(liveCheckTimer);
   liveCheckTimer = setTimeout(checkLiveAnswer, 500);

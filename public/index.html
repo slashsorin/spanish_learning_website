@@ -18,8 +18,13 @@
 
       <section class="card" aria-live="polite">
         <div class="filters">
-          <p class="challenge-label">Choose tenses</p>
-          <div id="tense-filters" class="checkbox-grid"></div>
+          <div class="filters-header">
+            <p class="challenge-label">Choose tenses</p>
+            <button id="tense-filter-toggle" class="secondary filter-toggle" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="tense-sheet">
+              Choose tenses
+            </button>
+          </div>
+          <p id="tense-summary" class="tense-summary">Selected: Present</p>
         </div>
 
         <p class="challenge-label">Current challenge</p>
@@ -42,6 +47,23 @@
         </div>
 
         <p id="feedback" class="feedback" aria-live="polite"></p>
+      </section>
+
+      <div id="tense-sheet-backdrop" class="sheet-backdrop" hidden></div>
+      <section id="tense-sheet" class="tense-sheet" role="dialog" aria-modal="true" aria-labelledby="tense-sheet-title" hidden>
+        <div class="tense-sheet-header">
+          <div>
+            <p class="challenge-label">Choose tenses</p>
+            <h3 id="tense-sheet-title">Select one or more tenses</h3>
+          </div>
+          <button id="tense-sheet-close" class="secondary sheet-close" type="button">Close</button>
+        </div>
+
+        <div id="tense-chip-list" class="tense-chip-list"></div>
+
+        <div class="sheet-actions">
+          <button id="tense-sheet-apply" type="button">Apply filters</button>
+        </div>
       </section>
     </main>
 
