@@ -6,14 +6,9 @@ const url = require('url');
 const PORT = process.env.PORT || 3000;
 const publicDir = path.join(__dirname, 'public');
 
-const regularVerbs = [
-  { infinitive: 'hablar', ending: 'ar' },
-  { infinitive: 'comer', ending: 'er' },
-  { infinitive: 'vivir', ending: 'ir' },
-  { infinitive: 'estudiar', ending: 'ar' },
-  { infinitive: 'aprender', ending: 'er' },
-  { infinitive: 'escribir', ending: 'ir' }
-];
+const regularVerbs = JSON.parse(
+  fs.readFileSync(path.join(__dirname, 'data', 'regular-verbs.json'), 'utf8')
+);
 
 const tenseOptions = [
   { value: 'present', label: 'Present' },
