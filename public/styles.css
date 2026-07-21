@@ -208,3 +208,72 @@ button:disabled {
 .feedback.error {
   color: #b91c1c;
 }
+
+@media (max-width: 640px) {
+  body {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .page-shell {
+    width: 100%;
+  }
+
+  .hero {
+    margin-bottom: 16px;
+  }
+
+  .card {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  h1 {
+    font-size: clamp(1.7rem, 8vw, 2.2rem);
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin-bottom: 16px;
+  }
+
+  .intro {
+    font-size: 0.98rem;
+  }
+
+  .translation-box {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .checkbox-grid {
+    width: 100%;
+  }
+
+  .filter-option {
+    width: 100%;
+    border-radius: 16px;
+    padding: 10px 12px;
+    white-space: normal;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+
+  #hint-btn {
+    margin-left: 0;
+    grid-column: 1 / -1;
+  }
+
+  .feedback {
+    min-height: 24px;
+    font-size: 0.95rem;
+  }
+}
