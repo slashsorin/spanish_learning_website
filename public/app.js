@@ -192,7 +192,7 @@ function checkLiveAnswer() {
   setAnswerState(isCorrect);
 
   if (isCorrect) {
-    feedbackEl.textContent = 'Correct form!';
+    feedbackEl.textContent = 'Correct!';
     feedbackEl.className = 'feedback success';
     answerInput.readOnly = true;
     answerInput.disabled = true;
