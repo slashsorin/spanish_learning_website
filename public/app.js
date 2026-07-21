@@ -86,7 +86,7 @@ function startAutoAdvance() {
   let elapsed = 0;
   progressTimer = setInterval(() => {
     elapsed += 100;
-    const progress = Math.min((elapsed / 2000) * 100, 100);
+    const progress = Math.min((elapsed / 1000) * 100, 100);
     progressBar.style.width = `${progress}%`;
 
     if (progress >= 100) {
@@ -98,7 +98,7 @@ function startAutoAdvance() {
   autoAdvanceTimer = setTimeout(() => {
     clearAutoAdvance();
     loadQuestion(getSelectedTenses());
-  }, 2000);
+  }, 1000);
 }
 
 function renderQuestion() {
